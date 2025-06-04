@@ -1,10 +1,10 @@
 ---
-- name:Deploy to tomcat
-  hosts:web
-  become:yes
+- name: Deploy to tomcat
+  hosts: web
+  become: yes
   tasks:
-    - name:copy war file to tomcat
+    - name: Copy war to tomcat
       copy:
- 	      src:"/var/snap/jenkins/ansibleJenkins/mavenAnsible.war"
- 		     des:"/opt/tomcat/webapps/mavenAnsible.war"
- 		     remote_src:no
+        src: "/var/snap/jenkins/ansibleJenkins/mavenAnsible.war"
+        dest: "/opt/tomcat/webapps/mavenAnsible.war"
+        remote_src: no
