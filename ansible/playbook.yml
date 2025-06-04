@@ -3,6 +3,7 @@
   hosts:web
   become:yes
   tasks:
+    - name:copy war file to tomcat
       copy:
  	      src:"/var/snap/jenkins/ansibleJenkins/mavenAnsible.war"
  		     des:"/opt/tomcat/webapps/mavenAnsible.war"
