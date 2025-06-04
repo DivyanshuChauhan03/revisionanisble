@@ -1,7 +1,7 @@
 ---
--name=Deploy to tomcat
- host=web
- become=yes
+-name:Deploy to tomcat
+ hosts:web
+ become:yes
  tasks:
  	copy:
  		src:"/var/snap/jenkins/ansibleJenkins/mavenAnsible.war"
