@@ -4,6 +4,7 @@
   become:yes
   tasks:
     - name:copy war to tomcat
+      copy:
         src: "/var/snap/jenkins/4870/workspace/ansibleJenkins/target/mavenAnsible.war"
         dest: "/opt/tomcat/webapps/mavenAnsible.war"
         remote_src:no
